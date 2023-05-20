@@ -1,0 +1,54 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "f96409d0-31ec-42ba-81d3-eb0f8a68cf21",
+        "name": "getui"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"sign\":\"9c4f94d60438bf5009087ec4d0c553126d818686d67f73fee10db0927dc52fcc\",\n    \"timestamp\": \"1623026758000\",\n    \"appkey\": \"QA4NVwLDR08GnupzoPxsm6\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "restapi.getui.com",
+              "path": "/v2/qnWKAo5LJc5zgWhk78JXK8/user/status/c125f6c2af72ea5c261f55536962366f"
+            },
+            "id": "fe1bc2b3-4fa9-4701-a337-e2e98adfaae2",
+            "name": "查询UniPush用户状态",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "token",
+                "value": "e4905212816629cfcaa6a7fb08fc35b853a345516c5ead8e422f8b95cf55d019"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

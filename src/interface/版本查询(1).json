@@ -1,0 +1,65 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "c633c61f-520a-430f-b419-d4cae0aa826f",
+        "name": "HMS（192.168.0.15）"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Service",
+            "id": "3d0991cb-f964-49d7-be8b-6f4c22ea37e2",
+            "name": "Version接口"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBodyEditorHeight": 234,
+                  "textBody": "{\"versionStatus\":\"1\"}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "192.168.0.15:8400",
+                  "path": "/manager/version/list"
+                },
+                "description": "",
+                "id": "8b90bd61-952b-4424-9748-4a8d53fe9a7f",
+                "name": "version - 5、版本查询",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

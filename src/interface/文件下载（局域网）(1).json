@@ -1,0 +1,72 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "c633c61f-520a-430f-b419-d4cae0aa826f",
+        "name": "HMS（192.168.0.15）"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Scenario",
+            "id": "322b505b-95b2-48c7-8798-d97441940d16",
+            "name": "UpLoad接口"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "multipart/form-data",
+                    "items": []
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "name": "file",
+                        "value": "E:/landsky/file/video/现场安装视频-20210702105619386.mp4"
+                      }
+                    ]
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "192.168.0.15:8400",
+                  "path": "/manager/upload/file/app"
+                },
+                "id": "c6c508e1-a76f-4286-8def-4f5691d0b93e",
+                "name": "UpLoad-5、文件下载(局域网)",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "x-auth-user",
+                    "value": "hello"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJoZWxsbyIsImlhdCI6MTYwOTg5OTM3MSwiZXhwIjoxNjA5OTQyNTcxfQ.PrHwhii06yrxHzJuKH3XSP7gpAdZLwvjRct-85QuM90"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

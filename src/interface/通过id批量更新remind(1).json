@@ -1,0 +1,90 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "c633c61f-520a-430f-b419-d4cae0aa826f",
+        "name": "工业物联网"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Service",
+            "id": "eedd8b88-5485-4179-9cb3-c7fea4820194",
+            "name": "MaintenanceRecord 接口"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBodyEditorHeight": 240,
+                  "textBody": ""
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "name": "deviceId",
+                        "value": "1"
+                      },
+                      {
+                        "enabled": true,
+                        "name": "partIds",
+                        "value": "1,2,3"
+                      },
+                      {
+                        "enabled": true,
+                        "name": "setTimes",
+                        "value": "2160,2000,30"
+                      },
+                      {
+                        "enabled": true,
+                        "name": "ids",
+                        "value": "26,27,28"
+                      },
+                      {
+                        "enabled": true,
+                        "name": "reminds",
+                        "value": "1,1,0"
+                      }
+                    ]
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "192.168.0.15:8400",
+                  "path": "/manager/maintenanceRecord/batch/update"
+                },
+                "id": "3acbf558-da4f-46d3-b81b-f2ddb417e9ef",
+                "name": "maintenanceRecord - 11、通过id批量更新Remind",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "2090e839-dbaf-4f3b-b27b-ee260bacd54a",
+        "name": "萤石云"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "appKey",
+                    "value": "e1e8604f543b4782874f57ac7ec5a8cc"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "appSecret",
+                    "value": "c136e5f3f7e72f895dfc1725825ee055"
+                  }
+                ]
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "open.ys7.com",
+              "path": "/api/lapp/token/get"
+            },
+            "description": "",
+            "id": "bd5b8350-efef-401b-a176-f8e156646152",
+            "name": "1、登陆获取Token",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "accessToken",
+                    "value": "at.7x8t0psc0r8pqdd6c79pn7ihcb51gdk4-8oi5x817db-1gfwylv-xl3l7cq5n"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "source",
+                    "value": "D35010425:1"
+                  }
+                ]
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "open.ys7.com",
+              "path": "/api/lapp/live/address/get"
+            },
+            "id": "78f27e8a-39c0-4b14-b93d-f175b1020069",
+            "name": "2、获取设备直播源",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "accessToken",
+                    "value": "at.attfzmh85727utd6cn1yjnbd5ej59go4-45ghm533gs-05m4fj1-0whs02xix"
+                  }
+                ]
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "open.ys7.com",
+              "path": "/api/lapp/live/video/list"
+            },
+            "id": "4b547843-f5fd-4eea-8b09-d70de30c8c07",
+            "name": "3、获取用户下直播视频列表",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "accessToken",
+                    "value": "at.attfzmh85727utd6cn1yjnbd5ej59go4-45ghm533gs-05m4fj1-0whs02xix"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "deviceSerial",
+                    "value": "G45209920"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "channelNo",
+                    "value": "1"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "direction",
+                    "value": "2"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "speed",
+                    "value": "2"
+                  }
+                ]
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "open.ys7.com",
+              "path": "/api/lapp/device/ptz/start"
+            },
+            "id": "162fbadb-5d08-49d2-9257-951dc8a6d58e",
+            "name": "4、开始云台控制",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "accessToken",
+                    "value": "at.attfzmh85727utd6cn1yjnbd5ej59go4-45ghm533gs-05m4fj1-0whs02xix"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "deviceSerial",
+                    "value": "G45209920"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "channelNo",
+                    "value": "1"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "direction",
+                    "value": "3"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "speed",
+                    "value": "2"
+                  }
+                ]
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "open.ys7.com",
+              "path": "/api/lapp/device/ptz/stop"
+            },
+            "id": "5358961c-be03-4c0e-b8a2-78fbe98c81f7",
+            "name": "5、停止云台控制",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

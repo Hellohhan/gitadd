@@ -1,0 +1,64 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "c633c61f-520a-430f-b419-d4cae0aa826f",
+        "name": "工业物联网"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Service",
+            "id": "4fcb451f-32ad-4095-b586-f6f014a0ab94",
+            "name": "Device 接口"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\"jsonEntity\":{\"name\":\"\",\"deviceModel\":\"\",\"produceBeginTime\":\"1999-10-1 10:00:00\",\"produceEndTime\":\"2009-10-1 10:00:00\",\"installBeginTime\":\"2020-11-01\",\"installEndTime\":\"2020-12-30\",\"province\":\"省\",\"city\":\"市\",\"county\":\"区\",\"detailedAddress\":\"2\",\"companyName\":\"科技\"},\"page\":{\"size\":5,\"current\":\"1\"},\"token\":\"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZG1pbiIsImlhdCI6MTYwMjA0MTM3MSwiZXhwIjoxNjAyMDg0NTcxfQ.3_Jnc06-fgRu7cv7p8XnfmLkyVWZWVr-_rfzABq69XY\"}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "192.168.0.15:8400",
+                  "path": "/manager/device/list"
+                },
+                "description": "",
+                "id": "dd59fa15-cf46-4bb2-8fd8-7ee46ce1022a",
+                "name": "Device - 7 、设备分页查询",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

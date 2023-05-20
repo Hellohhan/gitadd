@@ -1,0 +1,64 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "c633c61f-520a-430f-b419-d4cae0aa826f",
+        "name": "工业物联网"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Service",
+            "id": "2f3b1393-c097-4232-9dc5-76bc73d1e56d",
+            "name": "DeviceAlarm 接口"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\"jsonEntity\":{\"name\":\"\",\"deviceModel\":\"\",\"produceBeginTime\":\"\",\"produceEndTime\":\"\",\"installBeginTime\":\"\",\"installEndTime\":\"\",\"province\":\"省\",\"city\":\"市\",\"county\":\"区\",\"detailedAddress\":\"\",\"companyName\":\"科技\"},\"page\":{\"size\":\"10\",\"current\":\"1\"},\"deviceName\":\"3662\"}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "192.168.0.15:8400",
+                  "path": "/manager/deviceAlarm/list"
+                },
+                "description": "",
+                "id": "ecfc3048-6c32-400e-8ea4-698d650b04f4",
+                "name": "DeviceAlarm - 5、设备报警列表",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
